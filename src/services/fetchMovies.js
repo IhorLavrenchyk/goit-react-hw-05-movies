@@ -9,7 +9,7 @@ const searchParams = new URLSearchParams({
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
 export const getTrendingMovies = async () => {
-  const { data } = await axios.get(`/trending/all/week?${searchParams}`);
+  const { data } = await axios.get(`/trending/all/week${searchParams}`);
   return data.results;
 };
 
